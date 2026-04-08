@@ -1,0 +1,230 @@
+/* ── LUMIÈRE Register CSS — Ocean Blue & Silver ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap');
+
+.luxury-register-page {
+  display: flex; height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: #050d1a; overflow: hidden;
+}
+
+/* ── LEFT PANEL ── */
+.luxury-left {
+  flex: 1.2;
+  background: linear-gradient(135deg, #071525 0%, #0d3a52 100%),
+              url("/assets/images/img21.png") no-repeat center center/cover;
+  background-blend-mode: overlay;
+  position: relative;
+  display: flex; justify-content: center; align-items: center;
+  animation: slideInLeft 1s ease;
+}
+.luxury-overlay {
+  background: linear-gradient(135deg, rgba(5,13,26,0.55) 0%, rgba(13,58,82,0.65) 100%);
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 60px; backdrop-filter: blur(4px);
+}
+
+/* Diamond logo */
+.lm-diamond-wrap { margin-bottom: 14px; }
+.lm-diamond {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(90,171,204,0.8);
+  transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto; box-shadow: 0 0 20px rgba(90,171,204,0.3);
+}
+.lm-diamond-inner {
+  width: 18px; height: 18px;
+  background: rgba(90,171,204,0.2);
+  border: 1px solid rgba(90,171,204,0.5);
+}
+
+.luxury-brand {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+  margin-bottom: 50px; animation: fadeInDown 1s ease;
+}
+.luxury-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px; font-weight: 300;
+  color: #c8e8f8; letter-spacing: 0.35em; margin: 0;
+}
+.luxury-brand-name span { color: #5aabcc; }
+
+.luxury-welcome-text { margin-bottom: 50px; animation: fadeInUp 1s ease 0.3s both; }
+.luxury-welcome-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px; color: white; margin-bottom: 20px;
+  font-weight: 300; letter-spacing: 0.1em;
+}
+.luxury-divider { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 20px 0; }
+.luxury-divider-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #5aabcc, transparent); }
+.luxury-divider-diamond { color: #5aabcc; font-size: 14px; animation: pulse 2s ease infinite; }
+.luxury-welcome-text p { color: rgba(200,232,248,0.85); font-size: 15px; letter-spacing: 0.15em; }
+
+.luxury-features { display: flex; flex-direction: column; gap: 18px; animation: fadeInUp 1s ease 0.6s both; }
+.luxury-feature { display: flex; align-items: center; gap: 14px; color: rgba(200,232,248,0.9); font-size: 14px; letter-spacing: 0.05em; }
+.luxury-feature-dot {
+  width: 8px; height: 8px; background: #5aabcc; border-radius: 50%;
+  position: relative; animation: glow 2s ease infinite; flex-shrink: 0;
+}
+.luxury-feature-dot::after {
+  content: ''; position: absolute;
+  width: 16px; height: 16px; border: 1px solid #5aabcc; border-radius: 50%;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  animation: ripple 2s ease infinite;
+}
+
+/* ── RIGHT PANEL ── */
+.luxury-right {
+  flex: 0.8;
+  background: linear-gradient(135deg, #f8fbfe 0%, #edf5fa 100%);
+  display: flex; justify-content: center; align-items: center;
+  position: relative; overflow-y: auto;
+  animation: slideInRight 1s ease; padding: 40px 20px;
+}
+
+.luxury-register-card {
+  width: 450px; padding: 46px 42px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px); border-radius: 30px;
+  box-shadow: 0 25px 50px -12px rgba(26,96,128,0.2), inset 0 0 0 1px rgba(255,255,255,0.9);
+  transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+  position: relative; overflow: hidden;
+}
+.luxury-register-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, #5aabcc, #a0d8ef, #5aabcc);
+  background-size: 200%; animation: shimmer 3s linear infinite;
+}
+.luxury-register-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 35px 60px -15px rgba(26,96,128,0.25), inset 0 0 0 1px rgba(90,171,204,0.3);
+}
+
+.luxury-card-header { text-align: center; margin-bottom: 28px; }
+.luxury-card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; color: #1a3a52; margin-bottom: 10px;
+  font-weight: 400; letter-spacing: 0.08em;
+}
+.luxury-card-header p { color: #7ea8be; font-size: 13px; position: relative; display: inline-block; letter-spacing: 0.1em; }
+.luxury-card-header p::after {
+  content: ''; position: absolute; bottom: -8px; left: 50%;
+  transform: translateX(-50%); width: 40px; height: 2px;
+  background: #5aabcc; border-radius: 2px;
+}
+
+/* Message */
+.luxury-message { padding: 11px 18px; border-radius: 10px; margin-bottom: 18px; text-align: center; font-size: 13px; }
+.luxury-success { background: rgba(40,167,69,0.08); color: #28a745; border: 1px solid rgba(40,167,69,0.2); }
+.luxury-error   { background: rgba(220,53,69,0.08);  color: #dc3545; border: 1px solid rgba(220,53,69,0.2); animation: shake 0.5s ease; }
+
+/* Inputs */
+.luxury-form { margin-bottom: 20px; }
+.luxury-input-group { position: relative; margin-bottom: 18px; }
+.luxury-input-group input {
+  width: 100%; padding: 14px 20px 14px 50px;
+  border: 2px solid #dceef7; border-radius: 13px;
+  font-size: 14px; transition: all 0.3s ease;
+  background: white; color: #1a3a52;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.03em; box-sizing: border-box;
+}
+.luxury-input-group input:focus {
+  border-color: #5aabcc;
+  box-shadow: 0 0 0 4px rgba(90,171,204,0.12); outline: none;
+}
+.luxury-input-group input::placeholder { color: #aac5d5; font-weight: 300; }
+.luxury-icon {
+  position: absolute; left: 17px; top: 50%;
+  transform: translateY(-50%); color: #5aabcc;
+  font-size: 15px; transition: all 0.3s ease; z-index: 1;
+}
+.luxury-input-focus {
+  position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+  background: linear-gradient(90deg, #5aabcc, #a0d8ef);
+  transition: width 0.3s ease; border-radius: 2px;
+}
+.luxury-input-group input:focus ~ .luxury-input-focus { width: 100%; }
+
+/* Terms */
+.luxury-terms { margin: 16px 0; display: flex; align-items: center; gap: 10px; }
+.luxury-terms input[type="checkbox"] { width: 17px; height: 17px; cursor: pointer; accent-color: #5aabcc; }
+.luxury-terms label { color: #7ea8be; font-size: 13px; }
+.luxury-terms a { color: #5aabcc; text-decoration: none; font-weight: 500; }
+.luxury-terms a:hover { text-decoration: underline; }
+
+/* Register Button */
+.luxury-register-btn {
+  width: 100%; padding: 15px;
+  background: linear-gradient(135deg, #5aabcc, #1a6080);
+  border: none; color: white; font-weight: 500; font-size: 14px;
+  letter-spacing: 0.15em; border-radius: 13px; cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.luxury-register-btn::before {
+  content: ''; position: absolute; top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.5s ease;
+}
+.luxury-register-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 30px -10px rgba(90,171,204,0.45); }
+.luxury-register-btn:hover::before { left: 100%; }
+.luxury-btn-icon { transition: transform 0.3s ease; }
+.luxury-register-btn:hover .luxury-btn-icon { transform: translateX(5px); }
+.luxury-loading { opacity: 0.8; cursor: not-allowed; }
+.luxury-loader { width: 22px; height: 22px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 0.8s linear infinite; }
+
+/* Login link */
+.luxury-login-section { text-align: center; padding-top: 20px; border-top: 1px solid #dceef7; }
+.luxury-login-text { color: #7ea8be; font-size: 13px; margin-bottom: 10px; letter-spacing: 0.05em; }
+.luxury-login-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #5aabcc; text-decoration: none; font-weight: 500; font-size: 14px;
+  padding: 9px 20px; border-radius: 30px; transition: all 0.3s ease;
+  background: rgba(90,171,204,0.08); letter-spacing: 0.05em;
+}
+.luxury-login-link:hover { background: rgba(90,171,204,0.18); transform: translateX(4px); }
+.luxury-link-icon { transition: transform 0.3s ease; }
+.luxury-login-link:hover .luxury-link-icon { transform: translateX(5px); }
+
+/* Security badge */
+.luxury-security-badge {
+  margin-top: 20px; display: flex; align-items: center;
+  justify-content: center; gap: 8px; color: #aac5d5; font-size: 11px;
+}
+.luxury-security-badge svg { color: #5aabcc; font-size: 13px; }
+
+/* ── ANIMATIONS ── */
+@keyframes slideInLeft  { from{opacity:0;transform:translateX(-100px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideInRight { from{opacity:0;transform:translateX(100px)}  to{opacity:1;transform:translateX(0)} }
+@keyframes slideInDown  { from{opacity:0;transform:translateY(-20px)}  to{opacity:1;transform:translateY(0)} }
+@keyframes fadeInDown   { from{opacity:0;transform:translateY(-30px)}  to{opacity:1;transform:translateY(0)} }
+@keyframes fadeInUp     { from{opacity:0;transform:translateY(30px)}   to{opacity:1;transform:translateY(0)} }
+@keyframes pulse        { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.7;transform:scale(1.1)} }
+@keyframes glow         { 0%,100%{box-shadow:0 0 10px #5aabcc} 50%{box-shadow:0 0 22px #5aabcc} }
+@keyframes ripple       { 0%{transform:translate(-50%,-50%) scale(1);opacity:1} 100%{transform:translate(-50%,-50%) scale(2.2);opacity:0} }
+@keyframes shimmer      { 0%{background-position:-100% 0} 100%{background-position:200% 0} }
+@keyframes spin         { to{transform:rotate(360deg)} }
+@keyframes shake        { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .luxury-register-page { flex-direction: column; }
+  .luxury-left { flex: 0.4; min-height: 280px; }
+  .luxury-right { flex: 0.6; padding: 30px 20px; }
+  .luxury-brand-name { font-size: 38px; }
+  .luxury-welcome-text h2 { font-size: 28px; }
+  .luxury-register-card { width: 100%; max-width: 420px; }
+}
+@media (max-width:480px) {
+  .luxury-register-card { padding: 28px 18px; }
+  .luxury-brand-name { font-size: 30px; }
+  .luxury-welcome-text h2 { font-size: 22px; }
+}
